@@ -9,9 +9,9 @@ function Cart({ id, title, image, rating, price, oldPrice, itemsLeft }) {
     >
       <h3 className="fw-bolder">My Cart Preview</h3>
       <div className="d-flex flex-column">
-        {perfumes.slice(0, 3).map((perfume) => {
+        {perfumes.slice(0, 3).map((perfume, i) => {
           return (
-            <div className="d-flex mt-4 mb-3 gap-4">
+            <div key={i} className="d-flex mt-4 mb-3 gap-4">
               <div className="row">
                 <img src={perfume.image} style={{ width: "150px" }} />
               </div>
