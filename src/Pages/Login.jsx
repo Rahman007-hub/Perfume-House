@@ -6,7 +6,7 @@ const Login = () => {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
   const [error,setError]=useState("")
-  const redirect =useNavigate()
+  const redirect = useNavigate()
   const handleSubmit = (event) => {
     event.preventDefault()
 
@@ -23,19 +23,23 @@ const Login = () => {
 
     return (
       <div className="formbg">
-        <Link to="/">
-          <div className="position-absolute top-0 start-0 p-5">
-            <span className="main-color-bg text-white rounded-circle p-3">
-              PZ
-            </span>{" "}
-            <span className="text-white"> Perfumrye </span>
-          </div>
-        </Link>
+        <header className="py-4 px-2 px-lg-4">
+          <nav>
+            <Link to="/" className="second-link">
+              <div>
+                <span className="main-color-bg text-white rounded-circle p-3">
+                  PZ
+                </span>
+                <span className="text-white"> Perfume </span>
+              </div>
+            </Link>
+          </nav>
+        </header>
         <div className="container">
           <form
+            id="second-form"
             onSubmit={handleSubmit}
-            className="mx-auto bg-white p-5 shadow-lg rounded-2"
-            style={{ width: "642px" }}
+            className="m-auto bg-white p-3  shadow-lg rounded-2"
           >
             <h1>Welcome Back</h1>
             <p>Fill in your information to access your account</p>
